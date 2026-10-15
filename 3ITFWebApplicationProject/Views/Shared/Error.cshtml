@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error — Employee Manager</title>
+    <!-- MaterializeCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Design System -->
+    <link rel="stylesheet" href="~/Content/materialize-custom.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #F5F7FA;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page" role="main">
+        <div class="error-page-card">
+
+            <div aria-hidden="true" style="margin-bottom: 16px;">
+                <i class="material-icons" style="font-size: 64px; color: #C62828;">error_outline</i>
+            </div>
+
+            <div class="error-code" aria-label="Error">Oops!</div>
+
+            <h1 class="error-title">Something Went Wrong</h1>
+
+            <p class="error-description">
+                An unexpected error occurred while processing your request. This may be a temporary issue — please try again.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                <a href="/"
+                   class="btn waves-effect waves-light"
+                   style="background-color: #1565C0; border-radius: 8px; font-weight: 600; text-transform: none; height: 44px; line-height: 44px; padding: 0 28px; font-size: 1rem; display: inline-flex; align-items: center; gap: 8px; width: 220px; justify-content: center;">
+                    <i class="material-icons" aria-hidden="true" style="font-size: 18px;">home</i>
+                    Return to Home
+                </a>
+                <button onclick="history.back()"
+                        class="btn-flat waves-effect"
+                        style="color: #757575; font-weight: 500; text-transform: none; font-size: 0.9rem; padding: 0 16px;">
+                    <i class="material-icons left" aria-hidden="true" style="font-size:16px; vertical-align: middle;">arrow_back</i>
+                    Go Back
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+

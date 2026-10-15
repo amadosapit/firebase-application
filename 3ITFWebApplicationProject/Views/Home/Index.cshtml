@@ -1,0 +1,160 @@
+@{
+    ViewBag.Title = "Home";
+}
+
+<!-- ===== HERO ===== -->
+<section class="hero-section" aria-labelledby="hero-heading">
+    <div class="container">
+        <div class="row valign-wrapper" style="margin:0;">
+            <div class="col s12 m12 l7">
+                <span class="hero-badge">
+                    <i class="material-icons" aria-hidden="true" style="font-size:14px;">verified</i>
+                    3ITF Web Application Project
+                </span>
+                <h1 class="hero-title" id="hero-heading">
+                    Manage Your Employees<br>Simply &amp; Efficiently
+                </h1>
+                <p class="hero-subtitle">
+                    A streamlined employee management system that lets you add, update, and remove employee records in real time — all in one clean interface.
+                </p>
+                <div class="hero-actions">
+                    <a href="/ITFApplication/MainPage" class="btn-app-primary waves-effect waves-light">
+                        <i class="material-icons" aria-hidden="true">badge</i>
+                        Go to Employees
+                    </a>
+                    <a href="/Home/About" class="btn-app-secondary waves-effect">
+                        <i class="material-icons" aria-hidden="true">info</i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="col l5 hide-on-med-and-down">
+                <div class="hero-illustration">
+                    <div class="hero-icon-wrap" aria-hidden="true">
+                        <i class="material-icons">people</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section-block" aria-labelledby="features-heading">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title" id="features-heading">What You Can Do</h2>
+            <span class="section-divider" style="margin:0 auto var(--space-md);"></span>
+            <p class="section-subtitle">Everything you need to manage employee records from one place.</p>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m6 l4" style="margin-bottom: var(--space-lg);">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="material-icons">person_add</i>
+                    </div>
+                    <h5>Add Employees</h5>
+                    <p>Quickly register new employees by entering their first, middle, and last name. Records are saved instantly to the database.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4" style="margin-bottom: var(--space-lg);">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="material-icons">edit</i>
+                    </div>
+                    <h5>Edit Records</h5>
+                    <p>Update existing employee information at any time. Changes are reflected immediately across the system without a page reload.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4" style="margin-bottom: var(--space-lg);">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="material-icons">delete_sweep</i>
+                    </div>
+                    <h5>Remove Employees</h5>
+                    <p>Remove employee records safely with a single click. The employee list updates automatically after every deletion.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4" style="margin-bottom: var(--space-lg);">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="material-icons">sync</i>
+                    </div>
+                    <h5>Real-Time Updates</h5>
+                    <p>Built with AngularJS for seamless two-way data binding — the table always reflects the current state without manual refresh.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4" style="margin-bottom: var(--space-lg);">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="material-icons">storage</i>
+                    </div>
+                    <h5>Persistent Storage</h5>
+                    <p>All employee data is persisted in a relational database via Entity Framework, ensuring your records are safe and reliable.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m6 l4" style="margin-bottom: var(--space-lg);">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="material-icons">devices</i>
+                    </div>
+                    <h5>Responsive Design</h5>
+                    <p>Works seamlessly on desktops, tablets, and mobile phones, built on MaterializeCSS for a consistent mobile-friendly experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="section-block-alt" aria-labelledby="how-heading">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title" id="how-heading">How It Works</h2>
+            <span class="section-divider" style="margin:0 auto var(--space-md);"></span>
+            <p class="section-subtitle">Managing employee records is straightforward and quick.</p>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m4" style="margin-bottom: var(--space-lg);">
+                <div class="step-card">
+                    <div class="step-number" aria-label="Step 1">1</div>
+                    <h5>Navigate to Employees</h5>
+                    <p>Click on <strong>Employees</strong> in the navigation bar to open the employee management page.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4" style="margin-bottom: var(--space-lg);">
+                <div class="step-card">
+                    <div class="step-number" aria-label="Step 2">2</div>
+                    <h5>Fill in the Form</h5>
+                    <p>Enter the employee's first name, middle name, and last name into the form fields provided.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4" style="margin-bottom: var(--space-lg);">
+                <div class="step-card">
+                    <div class="step-number" aria-label="Step 3">3</div>
+                    <h5>Submit &amp; Manage</h5>
+                    <p>Hit <strong>Submit</strong> to add the record. Use <strong>Edit</strong> or <strong>Delete</strong> on any row to manage existing employees.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: var(--space-lg);">
+            <div class="col s12 center-align">
+                <a href="/ITFApplication/MainPage" class="btn-app-primary waves-effect waves-light" style="background-color: var(--color-primary); color: #fff; padding: 0 32px; height: 48px; line-height: 48px; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 1rem;">
+                    <i class="material-icons" aria-hidden="true">arrow_forward</i>
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</main>

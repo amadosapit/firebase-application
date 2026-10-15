@@ -1,0 +1,91 @@
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_ITFProjectLayout.cshtml";
+}
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header" aria-labelledby="about-app-heading">
+    <div class="container">
+        <div class="breadcrumb-nav" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <i class="material-icons" aria-hidden="true">chevron_right</i>
+            <a href="/ITFApplication/MainPage">Employees</a>
+            <i class="material-icons" aria-hidden="true">chevron_right</i>
+            <span aria-current="page">About</span>
+        </div>
+        <h1 id="about-app-heading">About the Application</h1>
+        <p>Technical overview of the Employee Manager web application.</p>
+    </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<section class="page-content">
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 l8 offset-l2">
+
+                <!-- App Description -->
+                <div class="app-card" style="margin-bottom: var(--space-xl);">
+                    <div class="card-header">
+                        <i class="material-icons" aria-hidden="true">people</i>
+                        <h5>Employee Manager</h5>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-md);">
+                            This is a full-stack <strong style="color: var(--color-text);">Employee CRUD Application</strong> built with ASP.NET MVC 5 and AngularJS. It provides a clean, real-time interface for creating, viewing, updating, and deleting employee name records stored in a relational database.
+                        </p>
+                        <p style="color: var(--color-text-muted); line-height: 1.75; margin: 0;">
+                            All data operations are performed asynchronously via HTTP requests to a RESTful JSON API powered by Entity Framework, ensuring the user interface stays responsive without full page reloads.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Architecture -->
+                <div class="app-card" style="margin-bottom: var(--space-xl);">
+                    <div class="card-header">
+                        <i class="material-icons" aria-hidden="true">account_tree</i>
+                        <h5>Architecture</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="collection app-collection" style="margin: 0; border-radius: var(--radius-md); overflow: hidden;">
+                            <li class="collection-item">
+                                <i class="material-icons" aria-hidden="true">layers</i>
+                                <span><strong>Pattern:</strong> MVC (Model-View-Controller)</span>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons" aria-hidden="true">code</i>
+                                <span><strong>Frontend Framework:</strong> AngularJS 1.x with two-way data binding</span>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons" aria-hidden="true">dns</i>
+                                <span><strong>Backend:</strong> ASP.NET MVC 5 (C#) with JSON endpoints</span>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons" aria-hidden="true">storage</i>
+                                <span><strong>Database ORM:</strong> Entity Framework</span>
+                            </li>
+                            <li class="collection-item">
+                                <i class="material-icons" aria-hidden="true">palette</i>
+                                <span><strong>UI Framework:</strong> MaterializeCSS 1.0.0</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Back button -->
+                <div class="center-align">
+                    <a href="/ITFApplication/MainPage"
+                       class="btn waves-effect waves-light"
+                       style="background-color: var(--color-primary); border-radius: var(--radius-md); font-weight: 600; text-transform: none; height: 44px; line-height: 44px; padding: 0 28px; font-size: var(--font-size-md);">
+                        <i class="material-icons left" aria-hidden="true">arrow_back</i>
+                        Back to Employees
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+

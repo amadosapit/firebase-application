@@ -1,0 +1,127 @@
+@{
+    ViewBag.Title = "About";
+}
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header" aria-labelledby="about-heading">
+    <div class="container">
+        <div class="breadcrumb-nav" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <i class="material-icons" aria-hidden="true">chevron_right</i>
+            <span aria-current="page">About</span>
+        </div>
+        <h1 id="about-heading">About This Project</h1>
+        <p>Learn about the technology and purpose behind the Employee Manager.</p>
+    </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<section class="page-content">
+    <div class="container">
+
+        <!-- Project Overview -->
+        <div class="row">
+            <div class="col s12 l8 offset-l2">
+                <div class="app-card" style="margin-bottom: var(--space-xl);">
+                    <div class="card-header">
+                        <i class="material-icons" aria-hidden="true">info</i>
+                        <h5>Project Overview</h5>
+                    </div>
+                    <div class="card-body">
+                        <p style="color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-md);">
+                            The <strong style="color: var(--color-text);">Employee Manager</strong> is a full-stack web application built as part of the 3ITF Web Application Development course. It demonstrates the integration of an ASP.NET MVC backend with an AngularJS frontend to create a functional, real-time CRUD (Create, Read, Update, Delete) application.
+                        </p>
+                        <p style="color: var(--color-text-muted); line-height: 1.75; margin: 0;">
+                            The application allows users to manage employee name records stored in a relational database, with all operations handled asynchronously through RESTful API calls — providing a smooth, no-reload user experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="row">
+            <div class="col s12 l8 offset-l2">
+                <div class="app-card" style="margin-bottom: var(--space-xl);">
+                    <div class="card-header">
+                        <i class="material-icons" aria-hidden="true">code</i>
+                        <h5>Technology Stack</h5>
+                    </div>
+                    <div class="card-body" style="padding-bottom: var(--space-md);">
+                        <div class="row" style="margin-bottom: 0;">
+                            <div class="col s12 m6" style="margin-bottom: var(--space-lg);">
+                                <p class="fw-600" style="color: var(--color-text); margin-bottom: var(--space-sm); font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-text-muted);">Backend</p>
+                                <ul class="collection app-collection" style="margin: 0; border-radius: var(--radius-md); overflow: hidden;">
+                                    <li class="collection-item">
+                                        <i class="material-icons" aria-hidden="true">dns</i>
+                                        ASP.NET MVC 5 (C#)
+                                    </li>
+                                    <li class="collection-item">
+                                        <i class="material-icons" aria-hidden="true">storage</i>
+                                        Entity Framework
+                                    </li>
+                                    <li class="collection-item">
+                                        <i class="material-icons" aria-hidden="true">swap_horiz</i>
+                                        RESTful JSON API
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col s12 m6" style="margin-bottom: var(--space-lg);">
+                                <p class="fw-600" style="margin-bottom: var(--space-sm); font-size: var(--font-size-sm); text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-text-muted);">Frontend</p>
+                                <ul class="collection app-collection" style="margin: 0; border-radius: var(--radius-md); overflow: hidden;">
+                                    <li class="collection-item">
+                                        <i class="material-icons" aria-hidden="true">code</i>
+                                        AngularJS 1.x
+                                    </li>
+                                    <li class="collection-item">
+                                        <i class="material-icons" aria-hidden="true">palette</i>
+                                        MaterializeCSS 1.0.0
+                                    </li>
+                                    <li class="collection-item">
+                                        <i class="material-icons" aria-hidden="true">notifications</i>
+                                        SweetAlert2
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Features chips -->
+        <div class="row">
+            <div class="col s12 l8 offset-l2">
+                <div class="app-card" style="margin-bottom: var(--space-xl);">
+                    <div class="card-header">
+                        <i class="material-icons" aria-hidden="true">star</i>
+                        <h5>Key Features</h5>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <span class="tech-chip"><i class="material-icons" style="font-size:14px;" aria-hidden="true">check_circle</i> Full CRUD Operations</span>
+                            <span class="tech-chip"><i class="material-icons" style="font-size:14px;" aria-hidden="true">check_circle</i> Real-Time Data Binding</span>
+                            <span class="tech-chip"><i class="material-icons" style="font-size:14px;" aria-hidden="true">check_circle</i> RESTful API</span>
+                            <span class="tech-chip"><i class="material-icons" style="font-size:14px;" aria-hidden="true">check_circle</i> Responsive Layout</span>
+                            <span class="tech-chip"><i class="material-icons" style="font-size:14px;" aria-hidden="true">check_circle</i> Database Persistence</span>
+                            <span class="tech-chip"><i class="material-icons" style="font-size:14px;" aria-hidden="true">check_circle</i> SweetAlert Notifications</span>
+                            <span class="tech-chip"><i class="material-icons" style="font-size:14px;" aria-hidden="true">check_circle</i> Material Design UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <a href="/ITFApplication/MainPage" class="btn waves-effect waves-light" style="background-color: var(--color-primary); border-radius: var(--radius-md); font-weight: 600; text-transform: none; letter-spacing: 0.3px; height: 44px; line-height: 44px; padding: 0 28px; font-size: var(--font-size-md);">
+                    <i class="material-icons right" aria-hidden="true">arrow_forward</i>
+                    Open Employee Manager
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+</main>

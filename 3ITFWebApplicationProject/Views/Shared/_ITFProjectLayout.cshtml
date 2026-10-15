@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Employee Manager</title>
+    <!-- MaterializeCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Design System -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/materialize-custom.css")">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body ng-app="ITFWebApplicationProjectModule" ng-controller="ITFWebApplicationProjectController">
+
+    <!-- ===== Mobile Sidenav ===== -->
+    <ul id="mobile-sidenav" class="sidenav" role="navigation" aria-label="Mobile navigation">
+        <li>
+            <div class="sidenav-brand" style="background-color: #263238 !important;">
+                <i class="material-icons" aria-hidden="true">people</i>
+                Employee Manager
+            </div>
+        </li>
+        <li>
+            <a href="/" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "active" : "")">
+                <i class="material-icons" aria-hidden="true">home</i>Home
+            </a>
+        </li>
+        <li>
+            <a href="/ITFApplication/MainPage" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "ITFApplication" && ViewContext.RouteData.Values["action"]?.ToString() == "MainPage" ? "active" : "")">
+                <i class="material-icons" aria-hidden="true">badge</i>Employees
+            </a>
+        </li>
+        <li>
+            <a href="/Home/About" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "About" ? "active" : "")">
+                <i class="material-icons" aria-hidden="true">info</i>About
+            </a>
+        </li>
+        <li>
+            <a href="/Home/Contact" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Contact" ? "active" : "")">
+                <i class="material-icons" aria-hidden="true">mail</i>Contact
+            </a>
+        </li>
+    </ul>
+
+    <!-- ===== Navbar ===== -->
+    <header class="app-navbar" style="background-color: #263238 !important;">
+        <nav class="blue-grey darken-4 z-depth-1" style="background-color: #263238 !important;" aria-label="Main navigation">
+            <div class="nav-wrapper container">
+                <a href="/" class="brand-logo" aria-label="Employee Manager — Home">
+                    <i class="material-icons" aria-hidden="true">people</i>
+                    <span>Employee Manager</span>
+                </a>
+
+                <!-- Mobile hamburger -->
+                <a href="#" data-target="mobile-sidenav" class="sidenav-trigger right sidenav-overlay-trigger" aria-label="Open navigation menu" aria-expanded="false">
+                    <i class="material-icons" aria-hidden="true">menu</i>
+                </a>
+
+                <!-- Desktop nav links -->
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Index" ? "nav-active" : "")">Home</a>
+                    </li>
+                    <li>
+                        <a href="/ITFApplication/MainPage" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "ITFApplication" && ViewContext.RouteData.Values["action"]?.ToString() == "MainPage" ? "nav-active" : "")">Employees</a>
+                    </li>
+                    <li>
+                        <a href="/Home/About" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "About" ? "nav-active" : "")">About</a>
+                    </li>
+                    <li>
+                        <a href="/Home/Contact" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" && ViewContext.RouteData.Values["action"]?.ToString() == "Contact" ? "nav-active" : "")">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== Page Content ===== -->
+    <main id="main-content">
+        @RenderBody()
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="app-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <i class="material-icons" aria-hidden="true">people</i>
+                    Employee Manager
+                </div>
+                <div class="footer-copy">
+                    &copy; @DateTime.Now.Year Employee Manager &mdash; 3ITF Web Application Project
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== Scripts ===== -->
+    <script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <!-- MaterializeCSS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- AngularJS -->
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/HolyScripts/module.js"></script>
+    <script src="~/Scripts/HolyScripts/service.js"></script>
+    <script src="~/Scripts/HolyScripts/controller.js"></script>
+    <script>
+        // Initialize MaterializeCSS components
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sidenav
+            var sidenavElems = document.querySelectorAll('.sidenav');
+            M.Sidenav.init(sidenavElems, { edge: 'left' });
+
+            // Tooltips
+            var tooltipElems = document.querySelectorAll('.tooltipped');
+            M.Tooltip.init(tooltipElems);
+
+            // Modals
+            var modalElems = document.querySelectorAll('.modal');
+            M.Modal.init(modalElems);
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

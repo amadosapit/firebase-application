@@ -1,0 +1,152 @@
+@{
+    ViewBag.Title = "Employees";
+    Layout = "~/Views/Shared/_ITFProjectLayout.cshtml";
+}
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header" aria-labelledby="emp-heading">
+    <div class="container">
+        <div class="breadcrumb-nav" role="navigation" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <i class="material-icons" aria-hidden="true">chevron_right</i>
+            <span aria-current="page">Employees</span>
+        </div>
+        <h1 id="emp-heading">Employee Records</h1>
+        <p>Add, edit, and remove employee entries from the database.</p>
+    </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<section class="page-content">
+    <div class="container">
+
+        <!-- ===== FORM SECTION ===== -->
+        <div class="form-section" style="margin-bottom: var(--space-2xl);">
+            <div class="form-section-header">
+                <i class="material-icons" aria-hidden="true">person_add</i>
+                <h5>Add / Edit Employee</h5>
+            </div>
+            <div class="form-section-body">
+                <div class="row" style="margin-bottom: 0;">
+
+                    <!-- First Name -->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix" aria-hidden="true">person_outline</i>
+                        <input id="icon_fname"
+                               type="text"
+                               class="validate"
+                               ng-model="txtFirstname"
+                               autocomplete="given-name"
+                               aria-required="true" />
+                        <label for="icon_fname">First Name</label>
+                    </div>
+
+                    <!-- Middle Name -->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix" aria-hidden="true">person_outline</i>
+                        <input id="icon_mname"
+                               type="text"
+                               class="validate"
+                               ng-model="txtMiddlename"
+                               autocomplete="additional-name"
+                               aria-required="true" />
+                        <label for="icon_mname">Middle Name</label>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="input-field col s12 m4 l4">
+                        <i class="material-icons prefix" aria-hidden="true">person_outline</i>
+                        <input id="icon_lname"
+                               type="text"
+                               class="validate"
+                               ng-model="txtLastname"
+                               autocomplete="family-name"
+                               aria-required="true" />
+                        <label for="icon_lname">Last Name</label>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="col s12 m6 l6" style="margin-top: var(--space-sm);">
+                        <a class="btn waves-effect waves-light btn-action btn-submit btn-full"
+                           ng-click="CreateEmployeeFunc()"
+                           role="button"
+                           aria-label="Submit new employee">
+                            <i class="material-icons left" aria-hidden="true">add_circle</i>
+                            Submit
+                        </a>
+                    </div>
+
+                    <div class="col s12 m6 l6" style="margin-top: var(--space-sm);">
+                        <a class="btn waves-effect waves-light btn-action btn-redirect btn-full"
+                           ng-click="redirectFunc()"
+                           role="button"
+                           aria-label="Go to About page">
+                            <i class="material-icons left" aria-hidden="true">arrow_forward</i>
+                            Go to About Page
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TABLE SECTION ===== -->
+        <div class="table-section">
+            <div class="table-section-header">
+                <i class="material-icons" aria-hidden="true">list</i>
+                <h5>Employee List</h5>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="app-table" aria-label="Employee records">
+                    <thead>
+                        <tr>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Middle Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Employee rows -->
+                        <tr ng-repeat="udata in userList" ng-if="userList && userList.length > 0">
+                            <td>{{udata.empFName}}</td>
+                            <td>{{udata.empMName}}</td>
+                            <td>{{udata.empLName}}</td>
+                            <td>
+                                <div class="table-actions">
+                                    <a class="btn waves-effect waves-light btn-action btn-edit"
+                                       ng-click="UpdateEmployeeFunc(udata.empID)"
+                                       role="button"
+                                       aria-label="Edit employee {{udata.empFName}} {{udata.empLName}}">
+                                        <i class="material-icons left" aria-hidden="true">edit</i>
+                                        Edit
+                                    </a>
+                                    <a class="btn waves-effect waves-light btn-action btn-delete"
+                                       ng-click="RemoveEmployeeFunc(udata.empID)"
+                                       role="button"
+                                       aria-label="Delete employee {{udata.empFName}} {{udata.empLName}}">
+                                        <i class="material-icons left" aria-hidden="true">delete</i>
+                                        Delete
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Empty state -->
+                        <tr ng-if="!userList || userList.length === 0">
+                            <td colspan="4">
+                                <div class="table-empty">
+                                    <i class="material-icons" aria-hidden="true">people_outline</i>
+                                    <p>No employee records yet. Use the form above to add the first employee.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>
+
